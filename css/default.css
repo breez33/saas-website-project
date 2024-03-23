@@ -2,11 +2,26 @@
   --white: #fff;
   --black: #000;
   --font-color-base: #677788;
+  --font-color-light: #ECF2FF;
   --font-color-dark: #5F6368;
   --font-color-link: #2476FF;
   --bg-accent-color-1: #F8FAFE;
   --bg-accent-color-2: #20335B;
   --success: #01C9A7;
+
+  --size-10: 0.625rem;
+  --size-14: 0.875rem;
+  --size-16: 1rem;
+  --size-18: 1.125rem;
+  --size-20: 1.25rem;
+  --size-25: 1.563rem;
+  --size-30: 1.875rem;
+  --size-40: 2.5rem;
+  --size-50: 3.125rem;
+  --size-60: 3.75rem;
+  --size-80: 5rem;
+  --size-100: 6.25rem;
+  --size-150: 9.375rem;
 }
 
 body {
@@ -32,7 +47,11 @@ ul {
   list-style: none;
 }
 
-a { text-decoration: none; }
+a { 
+  text-decoration: none;
+  color: var(--font-color-base)
+}
+
 p { margin-top: 0; }
 
 h2 {
@@ -50,8 +69,21 @@ img {
 
 .container {
   width: 100%;
-  padding-left: 15px;
-  padding-right: 15px;
+  padding-left: 20px;
+  padding-right: 20px;
   margin-left: auto;
   margin-right: auto;
+  max-width: 1024px;
+}
+
+.btn {
+  outline: none;
+  padding: 0.9rem 1.75rem;
+  border-radius: var(--size-30);
+  font-weight: 500;
+}
+
+.btn-primary {
+  color: var(--white);
+  background-color: var(--font-color-link);
 }

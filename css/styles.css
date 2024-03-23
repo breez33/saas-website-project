@@ -1,0 +1,278 @@
+.nav .container {
+  display: flex;
+  align-items: center;
+  padding-top: var(--size-30)
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+.nav-brand {
+  margin-right: auto;
+  width: 11.5rem;
+}
+
+.nav-links { margin-right: var(--size-14); }
+
+.nav-links .nav-item {
+  display: inline;
+  font-size: var(--size-14);
+  margin-right: var(--size-20);
+}
+
+header {
+  background-color: var(--white);
+  background-image: url(/assets/backgrounds/background-top.svg);
+  background-repeat: no-repeat;
+  background-size: auto;
+}
+
+.hero-wrapper {
+  display: flex;
+  padding-top: 7.5rem;
+  
+}
+
+.hero-text,
+.hero-icons {
+  flex: 1;
+  flex-grow: 1;
+}
+
+h1 {
+  color: var(--black);
+  font-size: 2.5rem;
+  font-weight: 600;
+  line-height: 3.25rem;
+  margin-bottom: var(--size-10);
+}
+
+.hero-text {
+  padding: 4.375rem 0;
+}
+
+.hero-text p {
+  font-size: var(--size-14);
+  margin-bottom: var(--size-30);
+}
+
+.hero-demo {
+  display: flex;
+  align-items: center;
+}
+
+.play-video-btn {
+  margin-right: var(--size-30);
+  display: inline-flex;
+  flex-shrink: 1;
+  align-items: center;
+}
+
+.play-video-btn i {
+  font-size: var(--size-18);
+  margin-right: var(--size-10);
+}
+
+.play-video-btn .text {
+  font-weight: 400;
+}
+
+.learn-more {
+  font-size: var(--size-14);
+  color: var(--font-color-link);
+  font-weight: 600;
+}
+
+.hero-icons {
+  position: relative;
+}
+
+.hero-icons div,
+.play-btn {
+  position: absolute;
+  background-color: var(--white);
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  box-shadow: 0 0 10px rgba(6, 61, 61, 0.3);
+}
+
+.hero-icons .google,
+.hero-icons .google-a {
+  width: var(--size-60);
+  padding: var(--size-10);
+}
+
+.hero-icons .paypal,
+.hero-icons .atlassian,
+.hero-icons .weave,
+.hero-icons .calendar,
+.hero-icons .asana {
+  width: var(--size-80);
+  padding: var(--size-16);
+}
+
+.hero-icons .google {
+  top: 8%;
+  left: 14%;
+}
+
+.hero-icons .paypal {
+  top: 50%;
+  left: 10%;
+}
+
+.hero-icons .google-a {
+  top: 80%;
+  left: 32%;
+}
+
+.hero-icons .atlassian {
+  top: 8%;
+  left: 38%;
+}
+
+.hero-icons .weave {
+  top: 50%;
+  left: 55%;
+}
+
+.hero-icons .calendar {
+  top: 80%;
+  left: 77%;
+}
+
+.hero-icons .asana {
+  top: 8%;
+  left: 81%;
+}
+
+.features { padding-top: var(--size-60); }
+
+.section-header {
+  text-align: center;
+  padding: var(--size-50) 0;
+}
+
+.section-header h2 {
+  color: var(--black);
+  font-size: var(--size-30);
+  font-weight: 700;
+  margin-bottom: var(--size-14)
+}
+
+.section-header p {
+  font-size: var(--size-16)
+}
+
+.feature-cards {
+  display: flex;
+  justify-content: center;
+  gap: var(--size-25);
+  flex-wrap: wrap;
+  margin-bottom: var(--size-80)
+}
+
+.feature-cards .card {
+  padding:  var(--size-25);
+  box-shadow: 0 10px 15px rgba(110, 110, 110, 0.2);
+  width: 13.75rem;
+}
+
+.feature-cards .title { color: var(--black); }
+.feature-cards .icon {  width: 3.125rem; }
+
+.feature-banner {
+  display: flex;
+  background-color: var(--bg-accent-color-1);
+  padding-top: var(--size-100);
+}
+
+.feature-demo,
+.feature-image {
+  flex: 1;
+}
+
+.feature-demo { padding: var(--size-30) 0 var(--size-30) var(--size-30); }
+
+.feature-demo h3 {
+  font-size: var(--size-25);
+  color: var(--black);
+  font-weight: 500;
+  line-height: var(--size-30)
+}
+
+.learn-graphic {
+  padding: var(--size-20);
+  margin-bottom: var(--size-50);
+}
+
+.graphic,
+.concepts {
+  display: flex;
+  gap: 0.313rem;
+  align-items: center;
+}
+
+.graphic { 
+  padding: 0 var(--size-80);
+  margin-bottom: var(--size-25)
+}
+
+.circle {
+  background-color: var(--font-color-light);
+  padding: var(--size-25);
+  border-radius: 50%;
+  flex-shrink: 1;
+}
+
+.dot {
+  background-color: var(--font-color-link);
+  padding: 3px;
+  border-radius: 50%;
+}
+
+.line {
+  border-bottom: 3px solid var(--font-color-light);
+  flex-grow: 1;
+}
+
+.concepts {
+  justify-content: space-between;
+  font-size: var(--size-16);
+  color: var(--black);
+  font-weight: 600;
+}
+
+.concepts div {
+  flex: 1;
+  text-align: center;
+}
+
+.learn-banner {
+  position: relative;
+  padding: var(--size-50) 0;
+}
+
+.play-btn {
+  padding: var(--size-20);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.play-btn i {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 25px;
+  height: 25px;
+  color: var(--black);
+  font-size: var(--size-25);
+}
