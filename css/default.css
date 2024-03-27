@@ -21,6 +21,7 @@
   --size-60: 3.75rem;
   --size-80: 5rem;
   --size-100: 6.25rem;
+  --size-120: 7.5rem;
   --size-150: 9.375rem;
 }
 
@@ -73,7 +74,7 @@ img {
   padding-right: 20px;
   margin-left: auto;
   margin-right: auto;
-  max-width: 1024px;
+  max-width: 1140px;
 }
 
 .btn {
