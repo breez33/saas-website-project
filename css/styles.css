@@ -533,6 +533,7 @@ h1 {
   border: 1px solid lightgray;
   font-weight: 600;
   font-size: var(--size-14);
+  outline-color: lightgray;
 }
 
 .form-info textarea,
@@ -606,6 +607,7 @@ footer {
   display: flex;
   gap: var(--size-60);
   line-height: var(--size-25);
+  font-weight: 500;
 }
 
 .helpful-links a {
@@ -619,11 +621,100 @@ footer {
   margin-bottom: var(--size-10);
 }
 
+.link-highlight {
+  font-size: 0.5rem;
+  color: var(--white);
+  background-color: var(--font-color-link);
+  border-radius: 0.188rem;
+  padding: 0.125rem var(--size-5);
+  margin-left: 0.313rem;
+}
+
+.resources-links i {
+  display: inline;
+  margin-right: var(--size-5)
+}
+
 hr.footer-divider {
-  margin: var(--size-20) var(--size-20);
+  margin: var(--size-40);
   height: 1px;
   background-color: lightgray;
   border: none;
+}
 
-  
+.site-map a,
+.site-map span {
+  margin-right: var(--size-5);
+}
+
+.additional-links {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--size-40);
+}
+
+.socials {
+  display: flex;
+  gap: var(--size-16);
+  align-items: center;
+}
+
+.socials > a {
+  padding: 0.5rem;
+  background-color: var(--font-color-light);
+  border-radius: var(--size-5);
+  display: flex;
+  transition: background-color 0.5s;
+  height: fit-content
+}
+
+.socials i {
+  font-size: var(--size-16);
+  color: var(--font-color-dark);
+  transition: color 0.5s;
+}
+
+.socials > a:hover {
+  background-color: var(--font-color-dark);
+
+  i {
+    color: var(--font-color-light);
+  }
+}
+
+.socials i:hover {
+  color: var(--font-color-light);
+}
+
+.local-preferences {
+  border: 1px solid var(--font-color-light);
+  background-color: var(--font-color-light);
+  border-radius: var(--size-5);
+  padding: var(--size-5) var(--size-16)
+}
+
+.dropdown-menu {
+  padding: 3px 0;
+}
+
+.dropdown img {
+  width: var(--size-16);
+  margin-right: var(--size-10)
+}
+
+.dropdown-text {
+  font-size: 14px;
+}
+
+.legal {
+  padding: 0 var(--size-150);
+}
+
+.legal .copyright,
+.legal .disclaimer{
+  text-align: center;
+  font-size: var(--size-14);
+  font-weight: 500;
+  margin-bottom: var(--size-20);
 }
