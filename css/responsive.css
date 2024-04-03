@@ -3,12 +3,34 @@
     display: block;
   }
 
-  [aria-expanded="false"] ~ ul {
+  [aria-expanded="false"] .open,
+  [aria-expanded="true"] .close {
+    display: inline-block;
+  }
+
+  [aria-expanded="true"] .open,
+  [aria-expanded="false"] .close {
     display: none;
   }
 
-  [aria-expanded="true"] ~ ul {
-    display: block;
+  .nav-menu {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    top: var(--size-80);
+    right: 0;
+    left: 0;
+    text-align: center;
+    background-color: var(--white);
+    padding: var(--size-60);
+    box-shadow: 0 10px 10px rgba(110, 110, 110, 0.15);
+    border-top: 1px solid var(--font-color-light)
+  }
+
+  .nav-links{
+    justify-content: center;
+    margin-bottom: var(--size-80)
   }
 
   .section-padding { 
@@ -17,7 +39,7 @@
 
   .hero-wrapper {
     flex-wrap: wrap;
-    padding-top: var(--size-80)
+    padding-top: 0;
   }
 
   .hero-text {
@@ -50,13 +72,14 @@
   .feature-demo {
     text-align: center;
     align-items: center;
+    padding-bottom: 0;
   }
 
   .testimonial-wrapper {
     flex-direction: column;
     text-align: center;
     align-items: center;
-    padding-bottom: 0;
+    padding-bottom: var(--size-30);
   }
 
   .testimonial-text { 
@@ -146,6 +169,16 @@
 }
 
 @media screen and (max-width: 767px) {
+
+  .nav-links {
+    flex-direction: column;
+    gap: var(--size-20);
+    margin-bottom: var(--size-50);
+  }
+
+  .nav-links .nav-item {
+    margin-right: 0;
+  }
   
   .feature-cards .custom-card {
     width: 100%;
@@ -168,6 +201,7 @@
 
   .graphic {
     padding: 0;
+    gap: var(--size-10)
   }
 
   .concepts div {

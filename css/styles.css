@@ -6,7 +6,7 @@
 }
 
 .nav-wrapper {
-  height: var(--size-100)
+  height: var(--size-100);
 }
 
 .fixed {
@@ -28,22 +28,31 @@
   position: absolute;
   right: var(--size-30);
   top: var(--size-30);
-  font-size: var(--size-20);
+  font-size: var(--size-25);
+  font-weight: 800;
 }
 
 [aria-controls="navbarDropdown"] {
   display: none;
 }
 
+.nav-menu {
+  display: flex;
+}
+
 .nav-links {
   display: flex;
   align-items: center;
-  margin-right: var(--size-14);
 }
 
 .nav-links .nav-item {
-  font-size: var(--size-14);
-  margin-right: var(--size-20);
+  font-size: var(--size-16);
+  font-weight: 500;
+  margin-right: var(--size-25);
+}
+
+.selected {
+  color: var(--font-color-link);
 }
 
 header {
@@ -55,7 +64,7 @@ header {
 
 .hero-wrapper {
   display: flex;
-  padding-top: var(--size-50)
+  padding-top: var(--size-20);
 }
 
 .section-padding {
@@ -114,7 +123,8 @@ h1 {
 .hero-icons-wrapper {
   position: relative;
   height: 100%;
-  width: 600px;
+  width: 100%;
+  max-width: 500px;
 }
 
 .hero-icons-wrapper div,
@@ -146,38 +156,38 @@ h1 {
 }
 
 .hero-icons-wrapper .google {
-  top: 8%;
-  left: 14%;
+  top: 12%;
+  left: 10%;
 }
 
 .hero-icons-wrapper .paypal {
-  top: 27%;
-  left: 11%;
+  top: 36%;
+  left: 9%;
 }
 
 .hero-icons-wrapper .google-a {
-  top: 36%;
-  left: 32%;
+  top: 43%;
+  left: 38%;
 }
 
 .hero-icons-wrapper .atlassian {
-  top: -29%;
-  left: 35%;
+  top: -24%;
+  left: 42%;
 }
 
 .hero-icons-wrapper .weave {
-  top: -15%;
-  left: 53%;
+  top: -6%;
+  right: -65%;
 }
 
 .hero-icons-wrapper .calendar {
-  top: -2%;
-  left: 80%;
+  top: 10%;
+  right: -91%;
 }
 
 .hero-icons-wrapper .asana {
-  top: -77%;
-  left: 81%;
+  top: -71%;
+  right: -92%;
 }
 
 .section-header {
@@ -207,7 +217,7 @@ h1 {
 }
 
 .custom-card {
-  box-shadow: 0 10px 15px rgba(110, 110, 110, 0.2);
+  box-shadow: 0 8px 15px rgba(110, 110, 110, 0.2);
 }
 
 .feature-cards .custom-card {
@@ -221,6 +231,21 @@ h1 {
   color: var(--black);
   font-size: var(--size-18);
   font-weight: bold;
+}
+
+.text-bubble .title {
+  display: inline-block;
+  font-size: 1.063rem;
+}
+
+.text-bubble .bubble {
+  font-size: 0.688rem;
+  font-weight: 600;
+  color: var(--white);
+  background-color: var(--success);
+  border-radius: var(--size-10);
+  padding: 0.188rem var(--size-10);
+  margin-left: 0.313rem;
 }
 
 .feature-cards .icon,
@@ -348,7 +373,7 @@ h1 {
 
 .testimonial-graphic img:nth-child(2) {
   position: absolute;
-  height: 380px;
+  height: 84%;
   top: 20%;
   right: 28%;
 }
@@ -384,6 +409,7 @@ h1 {
 .endorsement-title {
   text-align: center;
   font-size: var(--size-20);
+  font-weight: 700;
   margin-bottom: var(--size-40);
 }
 
@@ -429,7 +455,7 @@ h1 {
 
 .price-includes {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
   gap: var(--size-40);
   padding: var(--size-10) var(--size-50);
   flex-grow: 1;
@@ -514,7 +540,7 @@ h1 {
 }
 
 .hire-us-wrapper .title {
-  font-size: var(--size-16);
+  font-size: var(--size-14);
 }
 
 .profile-pictures {
@@ -611,9 +637,13 @@ h1 {
   cursor: pointer;
 }
 
+footer {
+  padding-bottom: var(--size-30);
+}
 .footer-top {
   display: flex;
-  gap: var(--size-60);
+  justify-content: space-around;
+  gap: var(--size-30);
 }
 
 .footer-logo {
@@ -636,7 +666,7 @@ h1 {
 .helpful-links {
   display: grid;
   grid-template-columns: repeat(4, minmax(100px, 1fr));
-  gap: var(--size-60);
+  gap: var(--size-40);
   line-height: var(--size-25);
   font-weight: 500;
 }
@@ -652,7 +682,7 @@ h1 {
   margin-bottom: var(--size-10);
 }
 
-.link-highlight {
+.link-bubble .bubble {
   font-size: 0.5rem;
   color: var(--white);
   background-color: var(--font-color-link);

@@ -26,6 +26,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
   </head>
   <body>
+    <div id="home"></div>
     <header>
       <div class="nav-wrapper">
         <nav class="navigation nav-bar">
@@ -33,19 +34,29 @@
             <div class="nav-brand">
               <img src="/assets/project_logo/logo.svg" alt="Front Brand Logo" />
             </div>
-            <button class="navbar-toggler" aria-expanded="false" aria-controls="navbarDropdown">
-              <span>&#9776;</span>
+            <button
+              class="navbar-toggler"
+              aria-expanded="false"
+              aria-controls="navbarDropdown"
+            >
+              <span class="open">&#9776;</span>
+              <span class="close">&#10005;</span>
             </button>
-            <ul class="nav-links">
-              <li class="nav-item"><a href="#home">Home</a></li>
-              <li class="nav-item"><a href="#features">Features</a></li>
-              <li class="nav-item"><a href="#learn">Learn</a></li>
-              <li class="nav-item"><a href="#pricing">Pricing</a></li>
-              <li class="nav-item"><a href="#hireUs">Hire us</a></li>
+            <div class="nav-menu">
+              <ul class="nav-links">
+                <li class="nav-item"><a href="#home">Home</a></li>
+                <li class="nav-item">
+                  <a href="" class="selected">Features</a>
+                </li>
+                <li class="nav-item"><a href="">Learn</a></li>
+                <li class="nav-item"><a href="">Pricing</a></li>
+                <li class="nav-item"><a href="">Hire us</a></li>
+              </ul>
               <a href="" class="button button-primary nav-button">Buy Now</a>
-            </ul>
+            </div>
           </div>
-        </nav></div>
+        </nav>
+      </div>
       <div class="container">
         <div class="hero-wrapper">
           <div class="hero-text">
@@ -56,11 +67,11 @@
             </h1>
             <p>Own the unlimited power of the web development</p>
             <div class="hero-demo">
-              <a href="#" class="button button-primary play-video-button">
+              <a href="" class="button button-primary play-video-button">
                 <i class="fa-solid fa-circle-play"></i>
                 <span class="text">Play Video</span>
               </a>
-              <a href="#" class="learn-more">Learn more</a>
+              <a href="" class="learn-more">Learn more</a>
             </div>
           </div>
           <div class="hero-icons">
@@ -136,7 +147,7 @@
             It is a long established fact that a reader will be distracted by
             the readable content of a page when looking at its layout
           </p>
-          <div class="learn-more">Learn More</div>
+          <a href="" class="learn-more">Learn More</a>
         </div>
         <div class="custom-card">
           <div class="icon">
@@ -147,18 +158,21 @@
             It is a long established fact that a reader will be distracted by
             the readable content of a page when looking at its layout
           </p>
-          <div class="learn-more">Learn More</div>
+          <a href="" class="learn-more">Learn More</a>
         </div>
         <div class="custom-card">
           <div class="icon">
             <img src="/assets/icons/premium.svg" alt="" />
           </div>
-          <h3 class="title">Premium</h3>
+          <div class="text-bubble">
+            <h3 class="title">Premium</h3>
+            <span class="bubble">sketch</span>
+          </div>
           <p class="text">
             It is a long established fact that a reader will be distracted by
             the readable content of a page when looking at its layout
           </p>
-          <div class="learn-more">Learn More</div>
+          <a href="" class="learn-more">Learn More</a>
         </div>
         <div class="custom-card">
           <div class="icon">
@@ -169,14 +183,14 @@
             It is a long established fact that a reader will be distracted by
             the readable content of a page when looking at its layout
           </p>
-          <div class="learn-more">Learn More</div>
+          <a href="" class="learn-more">Learn More</a>
         </div>
       </div>
       <div class="container">
         <div class="feature-banner">
           <div class="feature-demo">
             <h3>Front makes you look at things from a different perspective</h3>
-            <a href="#" class="button button-primary play-video-button">
+            <a href="" class="button button-primary play-video-button">
               <i class="fa-solid fa-circle-play"></i>
               <span class="text">Play Video</span>
             </a>
@@ -230,9 +244,9 @@
           <div class="learn-image">
             <img src="/assets/banners/banner_two.jpg" alt="Learn About Front" />
           </div>
-          <div class="play-button">
+          <a href="" class="play-button">
             <i class="fa-solid fa-play"></i>
-          </div>
+          </a>
         </div>
       </div>
       <div class="container">
@@ -295,7 +309,7 @@
               Start your front business now. 100% guaranteed money bank. No
               questions asked.
             </p>
-            <a href="#" class="button button-primary play-video-button">
+            <a href="" class="button button-primary play-video-button">
               <i class="fa-solid fa-circle-play"></i>
               <span class="text">Play Video</span>
             </a>
@@ -326,7 +340,10 @@
               <div class="icon">
                 <img src="/assets/icons/cancel.svg" alt="" />
               </div>
-              <h3 class="title">Cancel anytime</h3>
+              <div class="text-bubble">
+                <h3 class="title">Cancel anytime</h3>
+                <span class="bubble">sketch</span>
+              </div>
               <p class="text">
                 If it's not for you, just cancel, no hidden costs for fees.
               </p>
@@ -409,7 +426,7 @@
                   </div>
                   <div class="policies">
                     <a href="" class="policy-1">View privacy policy</a>
-                    <a href="" class="policy-2">View privacy policy</a>
+                    <a href="" class="policy-2 selected">View privacy policy</a>
                   </div>
                   <input
                     type="submit"
@@ -435,46 +452,46 @@
           </address>
           <div class="phone">
             <i class="fa-solid fa-phone"></i>
-            <a href="#">+1 (062) 109-9222</a>
+            <a href="">+1 (062) 109-9222</a>
           </div>
         </div>
         <div class="helpful-links">
           <div class="company-links">
             <div class="links-title">Company</div>
-            <a href="#">About</a>
-            <a href="#">
+            <a href="">About</a>
+            <a href="" class="link-bubble">
               <span>Career</span>
-              <span class="link-highlight">We're hiring</span>
+              <span class="bubble">We're hiring</span>
             </a>
-            <a href="#">Blog</a>
-            <a href="#">Customers</a>
-            <a href="#">Hire us</a>
+            <a href="">Blog</a>
+            <a href="">Customers</a>
+            <a href="">Hire us</a>
           </div>
           <div class="features-links">
             <div class="links-title">Features</div>
-            <a href="#">Press</a>
-            <a href="#">Release Notes</a>
-            <a href="#">Integrations</a>
-            <a href="#">Pricing</a>
+            <a href="">Press</a>
+            <a href="" class="selected">Release Notes</a>
+            <a href="">Integrations</a>
+            <a href="">Pricing</a>
           </div>
           <div class="documentation-links">
             <div class="links-title">Documentation</div>
-            <a href="#">Support</a>
-            <a href="#">Docs</a>
-            <a href="#">Status</a>
-            <a href="#">API Reference</a>
-            <a href="#">Tech Requirements</a>
+            <a href="">Support</a>
+            <a href="">Docs</a>
+            <a href="">Status</a>
+            <a href="">API Reference</a>
+            <a href="">Tech Requirements</a>
           </div>
           <div class="resources-links">
             <div class="links-title">Resources</div>
             <div>
-              <a href="#">
+              <a href="">
                 <i class="fa-solid fa-circle-info"></i>
                 <span>Help</span>
               </a>
             </div>
             <div>
-              <a href="#">
+              <a href="">
                 <i class="fa-solid fa-circle-user"></i>
                 <span>Your Account</span>
               </a>
@@ -486,11 +503,11 @@
       <div class="container footer-bottom">
         <div class="additional-links">
           <div class="site-map">
-            <a href="#">Privacy & Policy</a>
+            <a href="">Privacy & Policy</a>
             <span>></span>
-            <a href="#">Terms</a>
+            <a href="" class="selected">Terms</a>
             <span>></span>
-            <a href="#">Site Map</a>
+            <a href="">Site Map</a>
           </div>
           <div class="socials">
             <a href="https://www.facebook.com/">
@@ -518,19 +535,19 @@
             </button>
             <ul class="dropdown-menu">
               <li>
-                <a href="#" class="dropdown-item">
+                <a href="" class="dropdown-item">
                   <img src="/assets/icons/usa_flag.png" alt="USA Flag" />
                   <span class="dropdown-text">United States</span>
                 </a>
               </li>
               <li>
-                <a href="#" class="dropdown-item">
+                <a href="" class="dropdown-item">
                   <img src="/assets/icons/china_flag.png" alt="China Flag" />
                   <span class="dropdown-text">China</span>
                 </a>
               </li>
               <li>
-                <a href="#" class="dropdown-item">
+                <a href="" class="dropdown-item">
                   <img src="/assets/icons/france_flag.png" alt="France Flag" />
                   <span class="dropdown-text">France</span>
                 </a>
@@ -570,14 +587,23 @@
           }
         });
 
-        const navButton = $('button[aria-expanded]');
+        const navButton = $("button[aria-expanded]");
+        const navMenu = $(".nav-menu");
 
         function toggleNav() {
-          const expanded = navButton.attr("aria-expanded") === 'true' || false;
-          navButton.attr('aria-expanded', !expanded);
+          const expanded = navButton.attr("aria-expanded") === "true" || false;
+          navButton.attr("aria-expanded", !expanded);
+
+          if (!expanded) {
+            navMenu.slideDown().css({ display: "flex" });
+          } else {
+            navMenu.slideUp(function () {
+              navMenu.attr("style", "");
+            });
+          }
         }
 
-        navButton.on('click', toggleNav)
+        navButton.on("click", toggleNav);
       });
     </script>
   </body>
