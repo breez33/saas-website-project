@@ -23,26 +23,31 @@
       src="https://kit.fontawesome.com/ef9642f541.js"
       crossorigin="anonymous"
     ></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
   </head>
   <body>
-    <nav class="navigation nav-bar">
-      <div class="container">
-        <div class="nav-brand">
-          <img src="/assets/project_logo/logo.svg" alt="Front Brand Logo" />
-        </div>
-        <ul class="nav-links">
-          <li class="nav-item"><a href="">Home</a></li>
-          <li class="nav-item selected"><a href="">Features</a></li>
-          <li class="nav-item"><a href="">Learn</a></li>
-          <li class="nav-item"><a href="">Pricing</a></li>
-          <li class="nav-item"><a href="">Hire us</a></li>
-        </ul>
-        <a href="" class="button button-primary nav-button">Buy Now</a>
-      </div>
-    </nav>
     <header>
+      <div class="nav-wrapper">
+        <nav class="navigation nav-bar">
+          <div class="container">
+            <div class="nav-brand">
+              <img src="/assets/project_logo/logo.svg" alt="Front Brand Logo" />
+            </div>
+            <button class="navbar-toggler" aria-expanded="false" aria-controls="navbarDropdown">
+              <span>&#9776;</span>
+            </button>
+            <ul class="nav-links">
+              <li class="nav-item"><a href="#home">Home</a></li>
+              <li class="nav-item"><a href="#features">Features</a></li>
+              <li class="nav-item"><a href="#learn">Learn</a></li>
+              <li class="nav-item"><a href="#pricing">Pricing</a></li>
+              <li class="nav-item"><a href="#hireUs">Hire us</a></li>
+              <a href="" class="button button-primary nav-button">Buy Now</a>
+            </ul>
+          </div>
+        </nav></div>
       <div class="container">
-        <div class="hero-wrapper section-padding">
+        <div class="hero-wrapper">
           <div class="hero-text">
             <h1 class="hero-header">
               Empowering<br />
@@ -170,9 +175,7 @@
       <div class="container">
         <div class="feature-banner">
           <div class="feature-demo">
-            <h3>
-              Front makes you look at things from a different perspective
-            </h3>
+            <h3>Front makes you look at things from a different perspective</h3>
             <a href="#" class="button button-primary play-video-button">
               <i class="fa-solid fa-circle-play"></i>
               <span class="text">Play Video</span>
@@ -341,21 +344,19 @@
         </div>
       </div>
     </section>
-    <section id="hire-us" class="section-padding">
+    <section id="hireUs" class="section-padding">
       <div class="container hire-us-background">
         <div class="container hire-us-wrapper">
           <div class="text">
             <div class="left">
               <div class="section-header">
                 <h2>Hire Us</h2>
-                <p>
-                  Whatever your goal - we will get you there
-                </p>
+                <p>Whatever your goal - we will get you there</p>
                 <hr />
               </div>
               <div class="quote">
-                "I love front! I love the ease of use, I love the fact that I have
-                total creative freedom..."
+                "I love front! I love the ease of use, I love the fact that I
+                have total creative freedom..."
               </div>
             </div>
             <div class="right">
@@ -365,7 +366,8 @@
                 <img src="/assets/people/woman_two.jpg" alt="Charlotte Moore" />
                 <img src="/assets/people/woman_one.jpg" alt="Jayne Cobb" />
                 <img src="/assets/people/man_one.jpg" alt="Malcolm Reynolds" />
-              </div></div>
+              </div>
+            </div>
           </div>
           <div class="form">
             <div class="form-wrapper">
@@ -529,10 +531,7 @@
               </li>
               <li>
                 <a href="#" class="dropdown-item">
-                  <img
-                    src="/assets/icons/france_flag.png"
-                    alt="France Flag"
-                  />
+                  <img src="/assets/icons/france_flag.png" alt="France Flag" />
                   <span class="dropdown-text">France</span>
                 </a>
               </li>
@@ -540,7 +539,9 @@
           </div>
         </div>
         <div class="legal">
-          <div class="copyright">&copy; Front. 2022 Responsive designs. All rights reserved.</div>
+          <div class="copyright">
+            &copy; Front. 2022 Responsive designs. All rights reserved.
+          </div>
           <div class="disclaimer">
             When you visit or interact with our sites, services or tools, we or
             our authorized service providers may use cookies for storing
@@ -555,5 +556,29 @@
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
       crossorigin="anonymous"
     ></script>
+    <script>
+      $(document).ready(function () {
+        const navBar = $(".nav-bar");
+
+        $(window).on("scroll", function () {
+          let scrollTop = $(document).scrollTop();
+
+          if (scrollTop > 600) {
+            navBar.addClass("fixed").animate({ top: "0" }, 400);
+          } else {
+            navBar.stop(true, true).removeClass("fixed").removeAttr("style");
+          }
+        });
+
+        const navButton = $('button[aria-expanded]');
+
+        function toggleNav() {
+          const expanded = navButton.attr("aria-expanded") === 'true' || false;
+          navButton.attr('aria-expanded', !expanded);
+        }
+
+        navButton.on('click', toggleNav)
+      });
+    </script>
   </body>
 </html>

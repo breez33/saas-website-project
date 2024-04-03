@@ -1,4 +1,16 @@
 @media screen and (max-width: 1023px) {
+  [aria-controls="navbarDropdown"] {
+    display: block;
+  }
+
+  [aria-expanded="false"] ~ ul {
+    display: none;
+  }
+
+  [aria-expanded="true"] ~ ul {
+    display: block;
+  }
+
   .section-padding { 
     padding-top: var(--size-60);
   }
