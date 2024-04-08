@@ -1,3 +1,10 @@
+@media screen and (max-width: 1615px) {
+  .hire-us-background {
+    border-radius: 0;
+    width: 100%;
+  }
+}
+
 @media screen and (max-width: 1023px) {
   [aria-controls="navbarDropdown"] {
     display: block;
